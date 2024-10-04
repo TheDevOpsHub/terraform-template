@@ -110,7 +110,7 @@ resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
     version   = "latest"
   }
 
-  computer_name  = "hostname"
+  computer_name  = var.vm_hostname
   admin_username = var.username
 
   admin_ssh_key {

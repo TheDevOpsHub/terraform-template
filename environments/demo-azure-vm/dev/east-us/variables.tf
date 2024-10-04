@@ -21,3 +21,9 @@ variable "vm_size" {
   description = "vm_size"
   default     = "Standard_DS1_v2"
 }
+
+variable "vm_hostname" {
+  type        = string
+  description = "vm_hostname"
+  default     = "dev-azurevm"
+}
