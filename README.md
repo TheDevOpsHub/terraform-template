@@ -54,21 +54,21 @@ These demos use the same [modules/demo](./modules/demo/) above with difference v
 
 - [environments/demo/dev/](./environments/demo/dev/)
   ```
-  cd environments/demo/dev
+  cd environments/demo/dev/east-us
   terraform init
   terraform plan
   terraform apply
   ```
 - [environments/demo/staging/](./environments/demo/staging/)
   ```
-  cd environments/demo/staging
+  cd environments/demo/staging/east-us
   terraform init
   terraform plan
   terraform apply
   ```
 - [environments/demo/production/](./environments/demo/production/)
   ```
-  cd environments/demo/production
+  cd environments/demo/production/east-us
   terraform init
   terraform plan
   terraform apply
