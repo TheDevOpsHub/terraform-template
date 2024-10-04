@@ -1,7 +1,9 @@
 # terraform-template
+
 Terraform template repo
 
 ## Repo structure
+
 ```
 terraform-template-repo/
 ├── .github/
@@ -35,3 +37,16 @@ terraform-template-repo/
 ├── terraform.tfvars            # Default variable values
 └── README.md                   # Project documentation
 ```
+
+## Demo content
+
+This demonstrates how modules, multi environments, ... work
+
+### Module
+
+- [modules/demo](./modules/demo/)
+
+### Use module
+
+- [environments/demo/dev/](./environments/demo/dev/)
+- [environments/demo/staging/](./environments/demo/staging/)
