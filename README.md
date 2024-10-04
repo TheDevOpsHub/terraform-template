@@ -44,9 +44,14 @@ This demonstrates how modules, multi environments, ... work
 
 ### Module
 
+This is the demo module
+
 - [modules/demo](./modules/demo/)
 
 ### Use module
 
+These demos use the same [modules/demo](./modules/demo/) above with difference variablesF
+
 - [environments/demo/dev/](./environments/demo/dev/)
 - [environments/demo/staging/](./environments/demo/staging/)
+- [environments/demo/production/](./environments/demo/production/)
