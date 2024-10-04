@@ -6,7 +6,7 @@ Terraform template repo
 terraform-template-repo/
 ├── .github/
 │   └── workflows/
-│       └── terraform.yml       # GitHub Actions workflow to verify Terraform code
+│       └── terraform-validate.yml       # GitHub Actions workflow to verify Terraform code
 ├── environments/
 │   ├── dev/
 │   │   ├── backend.tf          # Backend config for Terraform state (e.g., S3, GCS)
