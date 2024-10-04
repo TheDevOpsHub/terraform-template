@@ -8,34 +8,39 @@ Terraform template repo
 terraform-template-repo/
 ├── .github/
 │   └── workflows/
-│       └── terraform-validate.yml  # GitHub Actions workflow to verify Terraform code
-├── environments/demo
-│   ├── dev/
-│   │   ├── backend.tf          # Backend config for Terraform state (e.g., S3, GCS)
-│   │   ├── main.tf             # Environment-specific resources
-│   │   └── variables.tf        # Variables specific to the dev environment
-│   ├── staging/
-│   │   ├── backend.tf
-│   │   ├── main.tf
-│   │   └── variables.tf
-│   └── prod/
-│       ├── backend.tf
-│       ├── main.tf
-│       └── variables.tf
+│       └── terraform-validate.yml   # GitHub Actions workflow to verify Terraform code
+├── environments/
+│   └── demo/
+│       ├── dev/
+│       │   └── east-us/
+│       │       ├── backend.tf       # Backend config for Terraform state (e.g., S3, GCS)
+│       │       ├── main.tf          # Environment-specific resources for dev
+│       │       └── variables.tf     # Variables specific to the dev environment
+│       ├── staging/
+│       │   └── east-us/
+│       │       ├── backend.tf       # Backend config for Terraform state
+│       │       ├── main.tf          # Environment-specific resources for staging
+│       │       └── variables.tf     # Variables specific to the staging environment
+│       └── prod/
+│           └── east-us/
+│               ├── backend.tf       # Backend config for Terraform state
+│               ├── main.tf          # Environment-specific resources for production
+│               └── variables.tf     # Variables specific to the production environment
 ├── modules/
-│   └── demo/                   # Example module for demo (e.g., VPC, Subnets)
-│       ├── main.tf
-│       ├── variables.tf
-│       └── outputs.tf
+│   └── demo/                        # Example module for demo (e.g., VPC, Subnets)
+│       ├── main.tf                  # Core module logic (resources)
+│       ├── variables.tf             # Module-specific variables
+│       └── outputs.tf               # Module outputs (if any)
 ├── regions/
-│   ├── us-west-1.tf            # Region-specific configurations and overrides
-│   └── eu-central-1.tf
+│   ├── us-west-1.tf                 # Region-specific configurations and overrides (e.g., AZ, networking)
+│   └── eu-central-1.tf              # Region-specific configurations and overrides
 ├── global/
-│   ├── providers.tf            # Terraform provider configurations (e.g., AWS, Azure)
-│   ├── variables.tf            # Global variables applicable across environments
-│   └── outputs.tf              # Global outputs (if any)
-├── terraform.tfvars            # Default variable values
-└── README.md                   # Project documentation
+│   ├── providers.tf                 # Terraform provider configurations (e.g., AWS, Azure)
+│   ├── variables.tf                 # Global variables applicable across environments
+│   └── outputs.tf                   # Global outputs (if any)
+├── terraform.tfvars                 # Default variable values for the project
+└── README.md                        # Project documentation
+
 ```
 
 ## Demo content
