@@ -10,7 +10,7 @@ terraform-template-repo/
 │   └── workflows/
 │       └── terraform-validate.yml   # GitHub Actions workflow to verify Terraform code
 ├── environments/
-│   └── demo/
+│   └── demo-message/
 │       ├── dev/
 │       │   └── east-us/
 │       │       ├── backend.tf       # Backend config for Terraform state (e.g., S3, GCS)
@@ -27,7 +27,7 @@ terraform-template-repo/
 │               ├── main.tf          # Environment-specific resources for production
 │               └── variables.tf     # Variables specific to the production environment
 ├── modules/
-│   └── demo/                        # Example module for demo (e.g., VPC, Subnets)
+│   └── demo-message/                        # Example module for demo (e.g., VPC, Subnets)
 │       ├── main.tf                  # Core module logic (resources)
 │       ├── variables.tf             # Module-specific variables
 │       └── outputs.tf               # Module outputs (if any)
@@ -49,35 +49,40 @@ This demonstrates how modules, multiple environments, and shared resources work.
 
 ### Module
 
-This is the demo module
+These are the demo modules:
 
-- [modules/demo](./modules/demo/)
+- [modules/demo-message](./modules/demo-message/)
+- [modules/demo-azure-vm](./modules/demo-azure-vm/)
 
-### Use module
+### Use demo-message module
 
-These demos use the same [modules/demo](./modules/demo/) above with difference variablesF
+These demos use the same [modules/demo-message](./modules/demo-message/) above with difference variablesF
 
-- [environments/demo/dev/](./environments/demo/dev/)
+- [environments/demo-message/dev/](./environments/demo-message/dev/)
   ```
-  cd environments/demo/dev/east-us
+  cd environments/demo-message/dev/east-us
   terraform init
   terraform plan
   terraform apply
   ```
-- [environments/demo/staging/](./environments/demo/staging/)
+- [environments/demo-message/staging/](./environments/demo-message/staging/)
   ```
-  cd environments/demo/staging/east-us
+  cd environments/demo-message/staging/east-us
   terraform init
   terraform plan
   terraform apply
   ```
-- [environments/demo/production/](./environments/demo/production/)
+- [environments/demo-message/production/](./environments/demo-message/production/)
   ```
-  cd environments/demo/production/east-us
+  cd environments/demo-message/production/east-us
   terraform init
   terraform plan
   terraform apply
   ```
+
+### Use demo-azure-vm module
+
+- TODO: Add document
 
 ## How to use the template?
 
