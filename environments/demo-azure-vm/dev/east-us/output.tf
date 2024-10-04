@@ -1,4 +1,12 @@
-output "vm_public_ip" {
-  description = "Public IP address of the provisioned Azure VM"
-  value       = module.demo_azure_vm.vm_ip
+output "resource_group_name" {
+  value = module.demo_azure_vm.resource_group_name
 }
+
+output "public_ip_address" {
+  value = module.demo_azure_vm.public_ip_address
+}
+
+output "key_data" {
+  value = module.demo_azure_vm.key_data
+}
+
