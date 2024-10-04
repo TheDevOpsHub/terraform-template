@@ -10,6 +10,7 @@ terraform-template-repo/
 │   └── workflows/
 │       └── terraform-validate.yml   # GitHub Actions workflow to verify Terraform code
 ├── environments/
+│   └── demo-azure-vm/...
 │   └── demo-message/
 │       ├── dev/
 │       │   └── east-us/
@@ -27,7 +28,8 @@ terraform-template-repo/
 │               ├── main.tf          # Environment-specific resources for production
 │               └── variables.tf     # Variables specific to the production environment
 ├── modules/
-│   └── demo-message/                        # Example module for demo (e.g., VPC, Subnets)
+│   └── demo-azure-vm/...            # Example module for demo (e.g., VPC, Subnets)
+│   └── demo-message/                # Example module for demo (e.g., VPC, Subnets)
 │       ├── main.tf                  # Core module logic (resources)
 │       ├── variables.tf             # Module-specific variables
 │       └── outputs.tf               # Module outputs (if any)
