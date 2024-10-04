@@ -8,8 +8,8 @@ Terraform template repo
 terraform-template-repo/
 ├── .github/
 │   └── workflows/
-│       └── terraform-validate.yml       # GitHub Actions workflow to verify Terraform code
-├── environments/
+│       └── terraform-validate.yml  # GitHub Actions workflow to verify Terraform code
+├── environments/demo
 │   ├── dev/
 │   │   ├── backend.tf          # Backend config for Terraform state (e.g., S3, GCS)
 │   │   ├── main.tf             # Environment-specific resources
@@ -23,7 +23,7 @@ terraform-template-repo/
 │       ├── main.tf
 │       └── variables.tf
 ├── modules/
-│   └── network/                # Example module for networking (e.g., VPC, Subnets)
+│   └── demo/                   # Example module for demo (e.g., VPC, Subnets)
 │       ├── main.tf
 │       ├── variables.tf
 │       └── outputs.tf
@@ -73,3 +73,9 @@ These demos use the same [modules/demo](./modules/demo/) above with difference v
   terraform plan
   terraform apply
   ```
+
+## How to use the template?
+
+- Create a new repo from this template.
+- Add the code for your appropriate use case.
+- Optionally, delete the demo module/code when it is no longer needed to keep the repo clean.
