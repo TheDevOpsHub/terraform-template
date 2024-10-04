@@ -1,0 +1,16 @@
+name: 'Terraform Security'
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  terraform:
+    name: 'Terraform Security Scan'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: triat/terraform-security-scan@v3
