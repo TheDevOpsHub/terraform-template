@@ -1,6 +1,6 @@
 # terraform-template
 
-Terraform template repo
+Terraform project template for deploying infrastructure across multiple environments and regions, following best practices with modular structure and automated syntax checks (GitHub Actions)
 
 ## Repo structure
 
