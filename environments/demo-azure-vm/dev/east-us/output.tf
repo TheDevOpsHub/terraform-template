@@ -10,3 +10,6 @@ output "key_data" {
   value = module.demo_azure_vm.key_data
 }
 
+output "private_key_data" {
+  value = module.demo_azure_vm.private_key_data
+}
