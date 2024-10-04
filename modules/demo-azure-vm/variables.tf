@@ -4,16 +4,10 @@ variable "location" {
   default     = "East US"
 }
 
-variable "subscription_id" {
-  description = "subscription_id for the VM"
-  type        = string
-  # sensitive   = true
-}
-
 variable "vm_size" {
   description = "Size of the Azure VM"
   type        = string
-  default     = "Standard_DS1_v2"
+  default     = "Standard_B1ms"
 }
 
 variable "admin_username" {
@@ -23,6 +17,12 @@ variable "admin_username" {
 
 variable "admin_password" {
   description = "Admin password for the VM"
+  type        = string
+  sensitive   = true
+}
+
+variable "subscription_id" {
+  description = "subscription_id for the VM"
   type        = string
   sensitive   = true
 }
