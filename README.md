@@ -40,7 +40,7 @@ terraform-template-repo/
 
 ## Demo content
 
-This demonstrates how modules, multi environments, ... work
+This demonstrates how modules, multiple environments, and shared resources work. In your real project, you can refer to this demo code and structure, and then delete the demo module when it is no longer needed.
 
 ### Module
 
@@ -53,5 +53,23 @@ This is the demo module
 These demos use the same [modules/demo](./modules/demo/) above with difference variablesF
 
 - [environments/demo/dev/](./environments/demo/dev/)
+  ```
+  cd environments/demo/dev
+  terraform init
+  terraform plan
+  terraform apply
+  ```
 - [environments/demo/staging/](./environments/demo/staging/)
+  ```
+  cd environments/demo/staging
+  terraform init
+  terraform plan
+  terraform apply
+  ```
 - [environments/demo/production/](./environments/demo/production/)
+  ```
+  cd environments/demo/production
+  terraform init
+  terraform plan
+  terraform apply
+  ```
